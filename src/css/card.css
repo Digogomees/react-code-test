@@ -11,7 +11,6 @@
     justify-content: start;
     align-items: center;
     border: 1px solid rgba(0, 17, 34, 0.10) ;
-    border-radius: 2px;
 }
 
 .card:hover {

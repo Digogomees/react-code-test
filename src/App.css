@@ -2,70 +2,19 @@
 
 .App {
   border-bottom: 1px solid #dfdacd;
+  font-family: "Lato";
 }
-
 .card-component {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 10px;
-  grid-auto-rows: minmax(100px, auto);
-  margin-top: 10px;
-  margin-left: 2%;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 1rem;
+  align-items: center;
+  
 }
 
 
-@media only screen and (min-width: 1200px) {
-  .card-component {
-    display: grid;
-    justify-content: center;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-    grid-auto-rows: minmax(100px, auto);
-    margin-top: 10px;
-    margin-left: 2%;
-  }
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (max-width: 992px) {
-  .card-component {
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    grid-auto-rows: minmax(100px, auto);
-    margin-top: 10px;
-    margin-left: 2%;
-  }
-
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (max-width: 768px) {
-  .card-component {
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    grid-auto-rows: minmax(100px, auto);
-    margin-top: 10px;
-    margin-left: 2%;
-  }
-
-}
-
-
-
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-  .card-component {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 10px;
-    grid-auto-rows: minmax(100px, auto);
-    margin-top: 10px;
-    margin-left: 2%;
-  }
+.card-component-main {
+  margin-left: 3%;
+  margin-right: 3%;
+  margin-top: 25px;
 }
