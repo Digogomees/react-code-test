@@ -1,4 +1,4 @@
-# This is my Applications for Tymeshift
+# This is my Application for Tymeshift
 
 This project was made using React.js only. 
 
