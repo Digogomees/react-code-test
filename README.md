@@ -1,25 +1,25 @@
-# Getting Started with Create React App
+# This is my Applications for Tymeshift
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was made using React.js only. 
 
-## Available Scripts
+## Components
 
-In the project directory, you can run:
+ I decided to separate all of the things I had to do into components, so it would ease my job and make it easier, in case I had to do the same thing twice, I could just render the component on both ends.
+    
 
-### `npm start`
+### `Nav.js`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+ Starting with the nav. I was kind of undecided on what to do here, but I ended up doing a nav so I could isolate the component and styling it without the chance of it affecting/getting affected by other components css. 
+  This one was quite simple, just two text tags and the styling provided to me in the github repo.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+### `Main.js`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+ So I chose Main.js to store all of the cards and for fetching the API data. I used a few functions from the utils folder, but I'll go there next. 
+  It was on this file that I ended up using AXIOS for fetching the API data. Axios managed the HTTP Request, that retrieve an response, which was an array (JSON object).
+ Last but not least I mapped through the array so I could match each card component with their unique data (used ID).
 
-### `npm run build`
+### `utils/date.helper.js`
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
@@ -39,11 +39,9 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+## Resources 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Eventough I'd love to say so, I don't know everything and am aware of how far from knowing it all is. Therefore I thought it would be nice to show the resources I used to make this project, as it shows my googling skills and ability to prepare what I am going to do in terms of logics and then research the execution needed for the process. For this I the obvious Stack Overflow, github pages and other articles that I found online. However, I am also part of several dev discord groups and I did go there too. I am not afraid to admit when I am stuck and I will ask for help rather than sitting there trying the same 4 solutions over and over. 
 
 ### Code Splitting
 

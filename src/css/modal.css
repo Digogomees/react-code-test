@@ -1,12 +1,13 @@
 .modal button {
-    padding: 13px 29px;
+    margin-right: 25px;
+    margin-top: 15px;
     font-size: 1rem;
     font-weight: bold;
+    background-color: transparent;
     border-radius: 5px;
     border: none;
     outline: none;
-    color: black;
-    opacity: 20%;
+    opacity: 100%;
     cursor: pointer;
   }
   #portal .modal-container {
@@ -38,12 +39,15 @@
     display: flex;
     justify-content: start;
     align-items: start;
+    padding-left: 15px;
+    opacity: 80%;
   }
 
   .modal-wrapper{
       display: flex;
       flex-direction: column;
-    align-items: flex-start;    
+      align-items: flex-start;    
+      padding: 25px;
   }
 
   .modal button {
@@ -51,8 +55,6 @@
     top: 7px;
     right: 7px;
     padding: 8px 11px;
-    background: rgb(94, 58, 66);
-    color: white;
     font-weight: bold;
     border: none;
     outline: none;
@@ -66,6 +68,23 @@
     line-height: 1.7;
     color: #001122;
     opacity: 80%;
+  }
+
+ .description h1 {
+  padding-left: 25px;
+  padding-right: 25px;
+  opacity: 80%;
+  }
+
+  .description .paragraph {
+    padding-left: 25px;
+    padding-right: 25px;
+    opacity: 80%;
+    font-weight: 400;
+  }
+
+  img {
+    opacity: 30%;
   }
 
   @keyframes animate {
