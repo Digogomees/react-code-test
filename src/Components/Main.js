@@ -16,15 +16,14 @@ function Main() {
             setLocations(response.data)
         })
   
-    }, [url]);
+    }, [url.id]);
     
 
     return (
       <div className="card-component" >
         {locations ? locations.map((location) => (
           <div>
-              <Card  key={location.id}
-                    id={location.id}
+              <Card key={location.id}
                     count={count}
                     name={location.name}
                     description={location.description}

@@ -6,13 +6,9 @@ import url from '../utils/Constants'
 import formatTime from '../utils/Date.helper'
 import apiFetch from '../utils/ApiFetch';
 
- const Modal = ({ viewCard, users, setShowModal, closeModal, description, name  }) => {
+ const Modal = ({ viewCard, users, setShowModal, closeModal, description, name, toogleModal  }) => {
 
-    const modalRef = useRef();
-
-    const [locations, setLocations] = useState(null);
- 
-
+    const [locations, setLocations] = useState([]);
 
     // Closes the modal when clicking outside of it
     function handleChangeModal (){
@@ -25,15 +21,17 @@ import apiFetch from '../utils/ApiFetch';
             setLocations(response.data)
         })
   
-    }, [url]);
+    }, [])
 
 
     // Rendering the modal JSX in the portal div
-    return ReactDOM.createPortal(
-        
-        <div className="modal-container" ref={modalRef} onClick={handleChangeModal} key="modal">
+    return(
+
+        <div>
+
+            <div className="modal-container" key="modal">
             {locations ? locations.map((location) => (
-            <div className="modal">
+            <div className="modal" key={locations.id}>
             
             
             <div className="modal-header-wrapper" >
@@ -41,7 +39,7 @@ import apiFetch from '../utils/ApiFetch';
                             <h1 className="title">{name}</h1>
                         </header>
                         </div>
-                        <div className="modal-wrapper" id={location.id}>
+                        <div className="modal-wrapper">
                         <div className="users">
                             <img src="https://res.cloudinary.com/dnho57ne8/image/upload/v1630662433/Users_skb8o5.svg" alt="users"/><p>{users} users</p>
                         </div>
@@ -55,7 +53,7 @@ import apiFetch from '../utils/ApiFetch';
                         </div>
                     </div>
                     <div onClick={closeModal}>
-                    <button onClick={closeModal}><img src="https://res.cloudinary.com/dnho57ne8/image/upload/v1630662433/Close_h2hs1a.svg"/></button>
+                    <button onClick={toogleModal}><img src="https://res.cloudinary.com/dnho57ne8/image/upload/v1630662433/Close_h2hs1a.svg"/></button>
                         </div>
                 
 
@@ -68,12 +66,12 @@ import apiFetch from '../utils/ApiFetch';
             
             
             </div>
-            )) : (<h1></h1>) }
+            )) : <h1></h1> }
             </div>
-            
-        ,
-        document.getElementById("portal")
-    );
+
+        </div>
+
+    )
 };
 
 export default Modal;

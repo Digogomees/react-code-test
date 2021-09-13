@@ -10,7 +10,7 @@
     opacity: 100%;
     cursor: pointer;
   }
-  #portal .modal-container {
+ .modal-container {
     position: fixed;
     top: 0;
     left: 0;
@@ -21,9 +21,10 @@
     align-items: center;
     justify-content: center;
     background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
   }
   .modal-container .modal {
-    z-index: 1;
+ 
     width: 440px;
     height: 350px;
     padding-top: 15px;
@@ -40,7 +41,6 @@
     justify-content: start;
     align-items: start;
     padding-left: 15px;
-    opacity: 80%;
   }
 
   .modal-wrapper{
